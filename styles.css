@@ -330,4 +330,24 @@ img.major {
     transform: translateY(-10px) scale(1.05); 
   }
   
-  
+  /*perbaikan*/
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .row {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .col-md-6, .col-5, .col-7 {
+        padding-bottom: 15px;
+    }
+}
+
+.nav-link {
+    padding: 10px;
+}
