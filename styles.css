@@ -127,7 +127,8 @@ button {
         opacity: 1;
         margin-bottom: 20px;
         margin-top: 0;
-        padding: 0; 
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     #img-main {
@@ -174,6 +175,8 @@ button {
 
 .text-main, .text-middle {
     padding-top: 3.2rem;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .col-5 {
@@ -188,6 +191,8 @@ button {
     align-items: center;
     overflow: hidden; 
     height: 100vh; 
+    padding-left: 15px;
+    padding-right: 15px;
 
 }
 
