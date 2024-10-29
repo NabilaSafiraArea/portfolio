@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; 
+}
+
+.nav-link {
+    font-weight: 400; 
+    margin-right: 15px; 
+}
+
+.quote {
+    color: #757575;
+}
+
+
+
+button {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #ffffff;;
+    cursor: pointer;
+    border: 0px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  }
+
+
+  button:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  }
+  
+.nav-item {
+    font-weight: normal;
+    transition: font-weight 0.3s ease;
+}
+
+.nav-item:hover {
+    font-weight: bold;
+}
+
+.img-animated {
+    opacity: 0; 
+    transform: scale(0.9); 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+.img-animated.loaded {
+    opacity: 1;
+    transform: scale(1); /
+}
+/*aboutme*/
+.centered-row {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+.animated-text {
+    opacity: 0; 
+    transform: translateY(-30px); 
+    animation: slideDown 1s ease-out forwards; 
+    transition: opacity 1s, transform 1s;
+  }
+  
+  .animated-text:nth-child(1) {
+    animation-delay: 0.5s;
+  }
+  .animated-text:nth-child(2) {
+    animation-delay: 1s;
+  }
+  
+  @keyframes slideDown {
+    to {
+      opacity: 1;
+      transform: translateY(0); 
+    }
+  }
+  
+
+  .right-aligned {
+    text-align: justify; 
+    line-height: 1.6; 
+    margin: 0; 
+    font-size: 1rem; 
+  }
+  
+  /*portfolio*/
+  .header-center {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100px; 
+    margin-bottom: 20px;
+}
+
+.header-center h3 {
+    background: #fafafa;
+    text-align: center;
+    color: #757575;
+    text-transform: uppercase;
+    font-size: 1.4rem; 
+    font-weight: normal;
+    letter-spacing: 0.2rem;
+    padding: 0 !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .row, .content .row {
+        clear: both;
+        max-width: 1040px;
+        margin: 0 auto;
+    }
+
+    #text-main {
+        visibility: visible;
+        opacity: 1;
+        margin-bottom: 20px;
+        margin-top: 0;
+        padding: 0; 
+    }
+
+    #img-main {
+        text-align: center;
+        visibility: visible;
+        opacity: 1;
+        margin-top: 0px; 
+    }
+
+    .img-container {
+        width: 80%; 
+        max-width: 600px; 
+        margin: 0 auto; 
+    }
+
+    .img-container img {
+        width: 300px; 
+        height: auto; 
+    }
+
+    .intro {
+        margin-top: 10px; 
+    }
+
+    .description {
+        margin-top: 10px; 
+    }
+}
+
+/* clearfix as you defined it */
+.clearfix:before, section:before, .row:before, .clearfix:after, section:after, .row:after {
+    display: table;
+    content: "";
+}
+
+.clearfix:after, section:after, .row:after {
+    clear: both;
+}
+
+.row.alt [class^="col-"] {
+    float: right;
+    margin: 0 0 0 3.84615385%;
+}
+
+.text-main, .text-middle {
+    padding-top: 3.2rem;
+}
+
+.col-5 {
+    width: 39.42307692%;
+}
+
+
+/* INI MAIN KONTEN BUKU*/
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    height: 100vh; 
+
+}
+
+.col-5, .col-7 {
+    opacity: 0; 
+    transform: translateX(0); 
+}
+
+.col-5 {
+    animation: slide-in-text 1s forwards; 
+}
+
+.col-7 {
+    animation: slide-in-image 1s forwards; /* Animation for image */
+    animation-delay: 0.5s; /* Delay for image to start after text */
+}
+
+@keyframes slide-in-text {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%); /* Start from left */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* End at neutral position */
+    }
+}
+
+@keyframes slide-in-image {
+    0% {
+        opacity: 0;
+        transform: translateX(100%); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+
+
+.align-c {
+    text-align: center; 
+}
+
+.transition {
+    transition: all 0.3s ease; 
+    color: black;
+}
+
+.transition:hover {
+    transform: scale(1.05);
+}
+
+
+.col-5, .col-7 {
+    flex: 1;
+}
+
+img.major {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*contact*/
+.phone-wrapper {
+    width: 300px;
+    height: 600px;
+    position: relative;
+  }
+  
+  /* ponsel */
+  .phone-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: translateY(110px);
+  }
+  
+  
+  /* Stylin ikon */
+  .social-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .social-icon img {
+    max-width: 50%;
+    height: auto;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* positioning */
+  .whatsapp {
+    top: 20%;
+    left: -25%;
+  }
+  
+  .linkedin {
+    bottom: 20%;
+    left: -25%;
+  }
+  
+  .github {
+    top: 20%;
+    right: -25%;
+  }
+  
+  .instagram {
+    bottom: 20%;
+    right: -25%;
+  }
+
+  /*khusus img*/
+  img {
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out; 
+  }
+  
+  /* Efek hover pada semua gambar */
+  img:hover {
+    transform: translateY(-10px) scale(1.05); 
+  }
+  
+  
